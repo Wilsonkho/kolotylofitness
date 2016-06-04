@@ -7492,3 +7492,16 @@ input[type="checkbox"]:disabled:checked:after,
 .carousel-caption h6 {
   color: inherit;
 }
+
+.workoutImg
+{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: auto;
+}
+
+.workoutInfo
+{
+  float: left;
+  padding: 50px;
+}
