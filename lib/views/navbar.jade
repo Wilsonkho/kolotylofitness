@@ -1,0 +1,25 @@
+nav.navbar.navbar-default.navbar-fixed-top
+  - var nav = {}; nav[title] = 'active'
+  .container
+    .navbar-header
+      button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar-collapse')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand(href='/') #{siteName}
+    #navbar-collapse.collapse.navbar-collapse
+      ul.nav.navbar-nav
+        li(class='#{nav.Home}')
+          a(href='/') Home
+        li(class='#{nav.Packages}')
+          a(href='/') Packages
+        li(class='#{nav.About}')
+          a(href='/') About
+      ul.nav.navbar-nav.navbar-right
+        li(class='#{nav.instagram}')
+          a(href='') Instagram
+        li(class='#{nav.facebook}')
+          a(href='') Facebook
+        li(class='#{nav.youtube}')
+          a(href='') YouTube
