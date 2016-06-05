@@ -12,3 +12,17 @@
 	width: 24px;
 	height: 24px;
 }
+
+/*Package page css*/
+.workoutImg
+{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: auto;
+}
+
+.workoutInfo
+{
+  float: left;
+  padding: 50px;
+}
