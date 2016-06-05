@@ -11,17 +11,20 @@ a {
     background-color: #F00 !important;
     border-color:  #FFFFFF !important;
     border-radius: 15px;
-    margin: 15px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
-.carouselPicture
-{
-	width:1000px;
-	height:1500px;
-}
+
 .carousel-inner
 {
 	width: 100%;
-	max-height: 500px !important;
+	/*max-height: 500px !important;*/
+
+}
+.carouselPicture 
+{
+	width: 100%;
 }
 .icon{
 	width: 24px;
@@ -44,9 +47,17 @@ a {
 .homeContainer
 {
 	margin-top: 25px;
+	width: 75%;
+	margin-right: 10%;
+	margin-left: 10%;
 }
 .quote
 {
+	font-size: 25px;
+	margin-top: 20px;
+	margin-right: 10%;
+	margin-left: 10%;
 	font-style: italic;
 	font-family: serif;
 }
+
