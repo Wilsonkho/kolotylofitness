@@ -1,3 +1,18 @@
+.navbar-inverse .navbar-brand {
+    color: #FFFFFF !important;
+}
+
+a {
+    color: #FFFFFF !important;
+    text-decoration: none;
+}
+
+.navbar-inverse {
+    background-color: #F00 !important;
+    border-color:  #FFFFFF !important;
+    border-radius: 15px;
+    margin: 15px;
+}
 .carouselPicture
 {
 	width:1000px;
@@ -25,4 +40,13 @@
 {
   float: left;
   padding: 50px;
+}
+.homeContainer
+{
+	margin-top: 25px;
+}
+.quote
+{
+	font-style: italic;
+	font-family: serif;
 }
