@@ -4,7 +4,55 @@ block vars
   - var title = 'Home'
 
 block content
+    
+    div.container
+      div.row
+        div.col-sm-12
 
-    h3.text-center Welcome Back
+        div#slider.carousel.slide(data-ride="carousel")
+
+          //indicators dot nav
+          ol.carousel-indicators
+            li(data-target="#slider" data-slide-to="0" class="active")
+            li(data-target="#slider" data-slide-to="1")
+            li(data-target="#slider" data-slide-to="2")
+            li(data-target="#slider" data-slide-to="3")
+            li(data-target="#slider" data-slide-to="4")
 
 
+          //wrapper for slides
+          div.carousel-inner(role="listbox")
+            
+            //picture slides
+            div.item.active
+              img(src="/images/ab-workout.jpg" alt="ab" class="carouselPicture")
+              div.carousel-caption
+                h1 GOOD JOB!
+
+            div.item
+              img(src="/images/Best.jpg" alt="ab" class="carouselPicture")
+              div.carousel-caption
+                h1 Stay HOT!
+
+            div.item
+              img(src="/images/bicep.jpg" alt="ab" class="carouselPicture")
+              div.carousel-caption
+                h1 Get Gains
+            
+            div.item
+              img(src="/images/Workout.jpg" alt="ab" class="carouselPicture")
+              div.carousel-caption
+                h1 Keep Positive
+
+            div.item
+              img(src="/images/delt.jpg" alt="ab" class="carouselPicture")
+              div.carousel-caption
+                h1 and Show Off
+          //controls, next, prev buttons
+          a(class="left carousel-control" href="#slider" role="button" data-slide="prev")
+            span(class="glyphicon glyphicon-chevron-left" aria-hidden="true")
+            span(class="sr-only") Previous
+
+          a(class="right carousel-control" href="#slider" role="button" data-slide="next")
+            span(class="glyphicon glyphicon-chevron-right" aria-hidden="true")
+            span(class="sr-only") Next

@@ -14,9 +14,11 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.15.1",
+    "bootstrap": "^3.3.6",
     "cookie-parser": "^1.4.3",
     "express": "^4.13.4",
     "jade": "^1.11.0",
+    "jade-bootstrap": "^1.0.6",
     "method-override": "^2.3.6",
     "morgan": "^1.7.0",
     "serve-favicon": "^2.3.0"
