@@ -84,3 +84,35 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
+
+/*Contact email form*/
+ //app.use('/about', router);
+ app.post('/about', function (req, res){
+     var transporter = nodemailer.createTransport('SMTP', {
+         service: 'Gmail',
+         auth: {
+             user: 'wh.ka.wei@gmail.com',
+             pass: 'hacker23',
+         }
+     });
+
+     var text = req.body.name; //+ '\n' + req.body.email + '\n' + req.body.phone + '\n' + req.body.message;
+
+     var mailOptions = {
+         from: 'wh.ka.wei@gmail.com',
+         to: 'who@ualberta.ca',
+         subject: 'Kolotylo Client Inquiry',
+         text: text
+     };
+
+     transporter.sendMail (mailOptions, function(error, info){
+         if(error){
+             console.log(error);
+             //res.redirect('/');
+         }
+         else{
+             console.log('Message sent: ' + info.response);
+             res.redirect('/');
+         }
+     }); 
+ });
