@@ -54,6 +54,49 @@ app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use(express.static(path.join(__dirname, 'lib/css')));
 app.use('/', routes);
 
+/*Contact email form*/
+
+app.get('/about', function(req, res) {
+
+  res.render('about', {
+      statusCode: 200,
+    });
+});
+
+
+ app.post('/about/send', handleAbout); // handles the route from about page
+
+ function handleAbout(req, res){
+
+     var transporter = nodemailer.createTransport({
+         service: 'Gmail',
+         auth: {
+             user: 'wh.ka.wei@gmail.com',
+             pass: 'hacker23',
+         }
+     });
+
+     var text = req.body.name + '\n' + req.body.email + '\n' + req.body.phone + '\n' + req.body.message;
+
+     var mailOptions = {
+         from: 'wh.ka.wei@gmail.com',
+         to: 'who@ualbert.ca',
+         subject: 'Kolotylo Client Inquiry',
+         text: text
+     };
+
+     transporter.sendMail (mailOptions, function(error, info){
+         if(error){
+             console.log(error);
+             res.json({yo: 'error'});
+         }
+         else{
+             console.log('Message sent: ' + info.response);
+             res.json({yo: 'info.response'});
+         }
+     }); 
+}
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
