@@ -8,6 +8,7 @@ var cookieParser = require('cookie-parser');
 var favicon = require('serve-favicon');
 var path = require('path');
 var routes = require('./lib/routes');
+var nodemailer = require('nodemailer');
 
 app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 8080);
 app.set('ip', process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1');
