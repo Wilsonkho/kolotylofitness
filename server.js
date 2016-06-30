@@ -129,7 +129,13 @@ app.use(function(err, req, res, next) {
 });
 
 /*Contact email form*/
- //app.use('/about', router);
+
+ app.get('/about', function(req, res){
+  res.render('about', {
+    statusCode: 200,
+  });
+ });
+
  app.post('/about', function (req, res){
      var transporter = nodemailer.createTransport('SMTP', {
          service: 'Gmail',
