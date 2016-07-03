@@ -2,7 +2,7 @@
   color: #FFFFFF !important;
 }
 
-a {
+.navbar-inverse a {
   color: #FFFFFF !important;
   text-decoration: none;
 }
@@ -77,4 +77,8 @@ a {
 {
   text-align: center;
   color: black;
+}
+
+.footer a{
+  color: grey;
 }
