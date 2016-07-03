@@ -80,7 +80,7 @@ app.get('/about', function(req, res) {
 
      var mailOptions = {
          from: 'wh.ka.wei@gmail.com',
-         to: 'who@ualbert.ca',
+         to: 'who@ualberta.ca',
          subject: 'Kolotylo Client Inquiry',
          text: text
      };
