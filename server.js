@@ -79,8 +79,8 @@ app.get('/about', function(req, res) {
      var text = req.body.name + '\n' + req.body.email + '\n' + req.body.phone + '\n' + req.body.message;
 
      var mailOptions = {
-         from: 'wh.ka.wei@gmail.com',
-         to: 'who@ualberta.ca',
+         from: 'kolotylofitness@gmail.com',
+         to: 'kolotylofitness@gmail.com',
          subject: 'Kolotylo Client Inquiry',
          text: text
      };
@@ -88,11 +88,10 @@ app.get('/about', function(req, res) {
      transporter.sendMail (mailOptions, function(error, info){
          if(error){
              console.log(error);
-             res.json({yo: error});
          }
          else{
              console.log('Message sent: ' + info.response);
-             res.json({yo: info.response});
+             res.render('sent');
          }
      }); 
 }
