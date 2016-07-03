@@ -80,7 +80,7 @@ app.get('/about', function(req, res) {
 
      var mailOptions = {
          from: 'wh.ka.wei@gmail.com',
-         to: 'who@ualbert.ca',
+         to: 'who@ualberta.ca',
          subject: 'Kolotylo Client Inquiry',
          text: text
      };
@@ -88,11 +88,11 @@ app.get('/about', function(req, res) {
      transporter.sendMail (mailOptions, function(error, info){
          if(error){
              console.log(error);
-             res.json({yo: 'error'});
+             res.json({yo: error});
          }
          else{
              console.log('Message sent: ' + info.response);
-             res.json({yo: 'info.response'});
+             res.json({yo: info.response});
          }
      }); 
 }
