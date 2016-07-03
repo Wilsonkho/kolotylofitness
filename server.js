@@ -8,6 +8,7 @@ var cookieParser = require('cookie-parser');
 var favicon = require('serve-favicon');
 var path = require('path');
 var routes = require('./lib/routes');
+var nodemailer = require('nodemailer');
 
 app.set('port', process.env.OPENSHIFT_NODEJS_PORT || 8080);
 app.set('ip', process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1');
@@ -52,6 +53,48 @@ app.use(express.static(path.join(__dirname, 'lib')));
 app.use(express.static(path.join(__dirname, 'node_modules')));
 app.use(express.static(path.join(__dirname, 'lib/css')));
 app.use('/', routes);
+
+/*Contact email form*/
+
+app.get('/about', function(req, res) {
+
+  res.render('about', {
+      statusCode: 200,
+    });
+});
+
+
+ app.post('/about/send', handleAbout); // handles the route from about page
+
+ function handleAbout(req, res){
+
+     var transporter = nodemailer.createTransport({
+         service: 'Gmail',
+         auth: {
+             user: 'wh.ka.wei@gmail.com',
+             pass: 'hacker23',
+         }
+     });
+
+     var text = req.body.name + '\n' + req.body.email + '\n' + req.body.phone + '\n' + req.body.message;
+
+     var mailOptions = {
+         from: 'kolotylofitness@gmail.com',
+         to: 'kolotylofitness@gmail.com',
+         subject: 'Kolotylo Client Inquiry',
+         text: text
+     };
+
+     transporter.sendMail (mailOptions, function(error, info){
+         if(error){
+             console.log(error);
+         }
+         else{
+             console.log('Message sent: ' + info.response);
+             res.render('sent');
+         }
+     }); 
+}
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -6,50 +6,38 @@ block vars
 block content
 
   div.container
+    h1 About Us
     div.row
-      div.col-sm-8
-        h1 About Me
-        div.myImg
-          img(src="/images/Workout.jpg", alt="generic placeholder image", height="200", width="300")
+      div.col-sm-3
+        //div.myImg
+        img(src="/images/aboutme.png", alt="generic placeholder image", height="350px", width="250px")
+      div.col-sm-6
         p.
-          Fitness has been a key part of my life for many years. I grew up playing football, hockey, basketball, soccer and baseball. Working out started as a hobby. I soon became addicted, spending literally thousands of hours in the gym (over a 4 year span). I stared doing more research on diet. I then went to elevated learning academy and received my fitness diploma through ACE. After graduating I instantly became more fit while helping many others around me reach their fitness goals. Kolotylo fitness was founded to help people stay looking and feeling amazing. 
+          Kolotylo Fitness is a online personalized training system. The goal of Kolotylo fitness is transformation for every client. Kolotylo fitness offers programs for both fat loss and muscle gain. The programs are all 12 weeks. You tell us how many times you can make the gym per week and we will make the schedule around your availability. Specifically designed with the best and most effective exercises, rep ranges and amount of sets to perform so you get the best results possible, and the most out of every workout. The workouts designed at Kolotylo fitness are scientifically proven to help you burn as much fat as possible, while building muscle.
         p.
-          Many deaths around me over the last couple years could have been avoided. I stared taking things a lot more personal when I realized I could save people's lives. This is my main motivation. My goal is to transform as many people as possible. Commitment will get you to your goals, my package will help your crush your goals.
+          Once you purchase the package, Kolotylo fitness will be in contact with you in within 24 hours. You will need to fill out a questionnaire. After getting to know you, we will make a package for you. At Kolotylo fitness we are so confident in our packages, that we offer money back if you are not satisfied. If you complete the program and are not satisfied with the results then you will get a full refund. After purchasing the package we will be available anytime for coaching via email. LET US HELP YOU ACHIEVE YOUR DREAM BODY!
       
       //Contact Form Template
-      div.col-sm-4
+      div.col-sm-3
         div.well.well-sm
-          form.form-horizontal(method='post')
+          form.form-horizontal(method='post', action='about/send')
             fieldset
-              legend.text-center.header Contact Me
+              legend.text-center.header Contact Us
               div.form-group
-                span.col-md-1-offset-2.text-center
-                  i.fa.fa-user.bigicon
-              .col-md-8
-                input#fname.form-control(name='name', type='text', placeholder='First Name')
-            .form-group
-              span.col-md-1.col-md-offset-2.text-center
-                i.fa.fa-user.bigicon
-              .col-md-8
-                input#lname.form-control(name='name', type='text', placeholder='Last Name')
-            .form-group
-              span.col-md-1.col-md-offset-2.text-center
-                i.fa.fa-envelope-o.bigicon
-              .col-md-8
-                input#email.form-control(name='email', type='text', placeholder='Email Address')
-            .form-group
-              span.col-md-1.col-md-offset-2.text-center
-                i.fa.fa-phone-square.bigicon
-              .col-md-8
-                input#phone.form-control(name='phone', type='text', placeholder='Phone')
-            .form-group
-              span.col-md-1.col-md-offset-2.text-center
-                i.fa.fa-pencil-square-o.bigicon
-              .col-md-8
-                textarea#message.form-control(name='message', placeholder='If you have any questions or concerns, feel free to leave your message here. I will get back to you as soon as possible.', rows='7')
-            .form-group
-              .col-md-12.text-center
-                button.btn.btn-primary.btn-lg(type='submit') Submit
+                div.col-md-12.text-center
+                  input#name.form-control(name='name', type='text', placeholder='Name')
+              div.form-group
+                div.col-md-12.text-center
+                  input#email.form-control(name='email', type='text', placeholder='Email Address')
+              div.form-group
+                div.col-md-12.text-center
+                  input#phone.form-control(name='phone', type='text', placeholder='Phone')
+              div.form-group
+                div.col-md-12.text-center
+                  textarea#message.form-control(name='message', placeholder='If you have any questions or concerns, feel free to leave your message here. We will get back to you within 24 hours.', rows='7')
+              div.form-group
+                div.col-md-12.text-center
+                  button.btn.btn-primary.btn-lg(type='submit') Submit
 
 
 
